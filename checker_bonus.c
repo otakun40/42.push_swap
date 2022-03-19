@@ -42,6 +42,8 @@ void	execute_command(t_stack **a, t_stack **b, char *command)
 	int	length;
 
 	length = ft_strlen(command) - 1;
+	if (length < 2)
+		exit_failure("Error");
 	if (!ft_strncmp(command, "pa", length))
 		push(a, b, "");
 	else if (!ft_strncmp(command, "pb", length))

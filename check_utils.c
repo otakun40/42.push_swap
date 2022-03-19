@@ -54,6 +54,8 @@ int	is_number(char *str)
 {
 	if (*str == '-')
 		str++;
+	if (*str < '0' || *str > '9')
+		return (0);
 	while (ft_isdigit(*str))
 		str++;
 	if (*str != 0)

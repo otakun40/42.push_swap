@@ -34,7 +34,7 @@ void	args_2_stack_a(int argc, char **argv, t_stack **stack)
 		args = count_strings(arr);
 		while (--args >= 0)
 		{
-			if (!is_number(arr[args]))
+			if (!is_number(arr[args]) || ft_strlen(arr[args]) > 11)
 				exit_failure("Error");
 			num = ft_atoi(arr[args]);
 			if (num < -2147483648 || num > 2147483647)
